@@ -10,7 +10,8 @@ myImage.onclick = function() {
 }
 
 let myButton = document.querySelector('button');
-let myHeading = document.querySelector('h1');
+// let myHeading = document.querySelector('h1');
+let myHeading = document.getElementById('myHeading');
 
 function setUserName() {
   let myName = prompt('Please enter your name.');
@@ -18,7 +19,8 @@ function setUserName() {
     setUserName();
   } else {
     localStorage.setItem('name', myName);
-    myHeading.textContent = 'Mozilla is cool, ' + myName;
+//    myHeading.textContent = 'Mozilla is cool, ' + myName;
+    myHeading.innerHTML = 'Mozilla is cool, ' + myName;
   }
 }
 
